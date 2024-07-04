@@ -1,0 +1,324 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #242526;
+    color: white;    
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: -moz-hidden-unscrollable;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: rgb(39, 35, 46);
+    width: 100vw;
+    height: 65px;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    gap: 0px;
+    margin: 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.fb-logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fb-like {
+    margin: 13px 0px 0px 10px;
+}
+
+.travel-logo {
+    font-family: 'Piazzolla', serif;
+    display: inline;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 900;
+    margin: 0px 0px 0px 15px;
+}
+
+.photo-logo {
+    font-family: 'Piazzolla', serif;
+    display: inline;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 900;
+    margin-left: 5px;
+}
+
+.dice-logo {
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    font-size: 30px;
+    font-weight: 300;
+    margin-left: 2px;
+}
+
+.com-logo {
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.menus-container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: end;
+    height:fit-content;
+}
+
+.main-menu {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    margin: 5px 15px 5px 5px;
+}
+
+.button {
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: rgb(88, 53, 141);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    transition: 0.2s;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.sub-menu {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    margin: 3px 15px 5px 5px;
+}
+
+.sub-button {
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: rgb(68, 41, 109);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    transition: 0.2s;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.button:hover {
+    background-color: rgb(94, 34, 190);
+    border-radius: 5px;
+    padding: 6px;
+    margin: -3px;
+}
+
+.sub-button:hover {
+    background-color: rgb(94, 34, 190);
+    border-radius: 5px;
+    padding: 6px;
+    margin: -3px;
+}
+
+.photo-container {
+    cursor: pointer;
+    display: flex;
+    contain: content;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    margin: 80px 15px 80px 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.photo-frame {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: rgb(39, 35, 46);
+    width: 100vw;
+    height: 65px;
+    bottom: 0px;
+    margin: 0px;
+    padding: 0px;
+    gap: 0px;
+    margin: 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.caption-box {
+    width: 80px;
+}
+
+.caption-text {
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    margin: 0px 0px 0px 15px;
+}
+
+.copyright-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-right: 15px;
+}
+
+.copyright {
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 300;
+    margin: 0px 0px 0px 0px;
+}
+
+/* @keyframes zoom-photo {
+    0%  {transform: scale(1);}
+    50%  {transform: scale(1.03);}
+} */
+
+@media (max-width: 800px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        height: fit-content;
+        top: 0px;
+        transform: all 1s;
+    }
+
+    .fb-like {
+        margin: 13px -5px 0px 10px;
+    }
+
+
+    .travel-logo {
+        font-family: 'Piazzolla', serif;
+        display: inline;
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 900;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    .photo-logo {
+        font-family: 'Piazzolla', serif;
+        display: inline;
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 900;
+        margin-left: 5px;
+    }
+    
+    .dice-logo {
+        font-family: 'Roboto', sans-serif;
+        display: inline;
+        font-size: 25px;
+        font-weight: 300;
+        margin-left: 2px;
+    }
+    
+    .com-logo {
+        font-family: 'Roboto', sans-serif;
+        display: inline;
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    .menus-container {
+        align-items: center;
+    }
+
+    .main-menu {
+        margin-right: 0px;
+    }
+
+    .sub-menu {
+        margin-right: 0px;
+    }
+
+    .photo-container {
+        margin: 110px 10px 110px 10px;
+        
+    }
+
+    .caption-box {
+        width: 60px;
+    }
+
+    .caption-text {
+        font-family: 'Roboto', sans-serif;
+        display: inline;
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: 300;
+        margin: 0px 0px 0px 5px;
+    }
+
+    .copyright-container {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-right: 5px;
+        gap: 5px
+    }
+
+    .copyright {
+        font-family: 'Roboto', sans-serif;
+        display: inline;
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: 200;
+        margin: 0px;
+    }
+
+    #copyright-separator {
+        display: none;
+    }
+  }
