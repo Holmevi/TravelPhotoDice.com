@@ -40,6 +40,31 @@ body {
     align-items: center;
 }
 
+.follow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+
+.follow-button {
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: rgb(39, 35, 46);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0px;
+    transition: 0.2s;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.follow-image {
+    height: 35px;
+    padding: 0px;
+}
+
 .fb-like {
     margin: 13px 0px 0px 10px;
 }
@@ -75,6 +100,7 @@ body {
     display: inline;
     font-size: 30px;
     font-weight: 300;
+    margin-right: 15px;
 }
 
 .menus-container {
@@ -123,6 +149,12 @@ body {
     padding: 3px;
     transition: 0.2s;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.follow-button:hover {
+    background-color: rgb(94, 34, 190);
+    border-radius: 5px;
+    padding: 3px;
 }
 
 .button:hover {
@@ -271,6 +303,21 @@ body {
         font-weight: 300;
     }
 
+    .follow-container {
+        width: 50px;
+    }
+
+    .follow-image {
+        height: 25px;
+        padding: 0px;
+    }
+
+    .follow-button:hover {
+        background-color: rgb(39, 35, 46);
+        border-radius: 5px;
+        padding: 0px;
+    }
+
     .menus-container {
         align-items: center;
     }
@@ -285,7 +332,6 @@ body {
 
     .photo-container {
         margin: 110px 10px 110px 10px;
-        
     }
 
     .caption-box {
