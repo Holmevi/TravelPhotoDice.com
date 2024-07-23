@@ -98,6 +98,12 @@ displayPhoto.addEventListener('click', photoClick);
             const highriseButton = document.querySelector('#highrise-button');
             highriseButton.addEventListener('click', highriseClick);
 
+            const shoppingButton = document.querySelector('#shopping-button');
+            shoppingButton.addEventListener('click', shoppingClick);
+
+            const coffeeButton = document.querySelector('#coffee-button');
+            coffeeButton.addEventListener('click', coffeeClick);
+
             const testButton = document.querySelector('#test-button');
             testButton.addEventListener('click', testClick);
 
@@ -237,6 +243,20 @@ function cityClick() {
     function highriseClick() {
         filterType = 'Tag';
         filter = 'Highrise';
+        let selectedPhoto = generatePhoto();
+        showPhoto(selectedPhoto);
+    }
+
+    function shoppingClick() {
+        filterType = 'Tag';
+        filter = 'Shopping';
+        let selectedPhoto = generatePhoto();
+        showPhoto(selectedPhoto);
+    }
+
+    function coffeeClick() {
+        filterType = 'Tag';
+        filter = 'Coffee';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
     }
