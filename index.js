@@ -126,6 +126,7 @@ function disableSubMenus() {
     resortMenu.style="display: none"
     cityMenu.style="display: none"
     allMenu.style="display: none"
+    countrySelect.value=""
 }
 
 function photoClick() {
