@@ -150,6 +150,19 @@ body {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
+.sub-select {
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: rgb(68, 41, 109);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    transition: 0.2s;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
 .follow-button:hover {
     background-color: rgb(94, 34, 190);
     border-radius: 5px;

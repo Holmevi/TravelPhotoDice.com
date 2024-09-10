@@ -50,6 +50,11 @@ displayPhoto.addEventListener('click', photoClick);
     const allButton = document.querySelector('#all-button');
     allButton.addEventListener('click', allClick);
 
+        const allMenu = document.querySelector('#all-menu');
+
+            const countrySelect = document.querySelector('#country-select');
+            countrySelect.addEventListener('change', countryChange);
+
     const natureButton = document.querySelector('#nature-button');
     natureButton.addEventListener('click', natureClick);
 
@@ -120,6 +125,7 @@ function disableSubMenus() {
     natureMenu.style="display: none"
     resortMenu.style="display: none"
     cityMenu.style="display: none"
+    allMenu.style="display: none"
 }
 
 function photoClick() {
@@ -141,7 +147,15 @@ function allClick() {
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
     disableSubMenus();
+    allMenu.style="display: flex";
 }
+
+    function countryChange() {
+        filterType = 'Country';
+        filter = countrySelect.value;
+        let selectedPhoto = generatePhoto();
+        showPhoto(selectedPhoto);
+    }
 
 function natureClick() {
     filterType = 'Tag';
