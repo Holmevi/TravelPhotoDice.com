@@ -118,6 +118,9 @@ displayPhoto.addEventListener('click', photoClick);
     const locationButton = document.querySelector('#location-button');
     locationButton.addEventListener('click', locationClick);
 
+    const binguButton = document.querySelector('#bingu');
+    binguButton.addEventListener('click', binguClick);
+
 const locationType = document.querySelector('#location-caption');
 const photoDate = document.querySelector('#photo-date');
 
@@ -293,6 +296,13 @@ function countryClick() {
 function locationClick() {
     filterType = 'Location';
     filter = locationButton.textContent;
+    let selectedPhoto = generatePhoto();
+    showPhoto(selectedPhoto);
+}
+
+function binguClick() {
+    filterType = 'Tag';
+    filter = 'Bingu';
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
 }
