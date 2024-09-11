@@ -183,6 +183,13 @@ body {
     margin: -3px;
 }
 
+.sub-select:hover {
+    background-color: rgb(94, 34, 190);
+    border-radius: 5px;
+    padding: 6px;
+    margin: -3px;
+}
+
 .photo-container {
     cursor: pointer;
     display: flex;
