@@ -227,6 +227,20 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+#big-info-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#small-info-field {
+    display: none;
+    flex-direction: row;
+}
+
+
+
 .info-container {
     display: flex;
     flex-direction: column;
@@ -251,9 +265,18 @@ body {
     margin: 0px 0px 0px 15px;
 }
 
+.big-info-caption-text {
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
 .copyright-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* row */
+    align-items: end; /* new line*/
     gap: 5px;
     margin-right: 15px;
 }
@@ -262,7 +285,7 @@ body {
     font-family: 'Roboto', sans-serif;
     display: inline;
     font-size: 14px;
-    line-height: 30px;
+    line-height: 20px;
     font-weight: 300;
     margin: 0px 0px 0px 0px;
 }
@@ -271,10 +294,14 @@ body {
     font-family: 'Roboto', sans-serif;
     display: inline;
     font-size: 14px;
-    line-height: 30px;
+    line-height: 20px;
     font-weight: 300;
     margin: 0px 0px 0px 0px;
     cursor: pointer;
+}
+
+#copyright-separator {
+    display: none;
 }
 
 /* @keyframes zoom-photo {
@@ -363,6 +390,32 @@ body {
         margin: 110px 10px 110px 10px;
     }
 
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        background-color: rgb(39, 35, 46);
+        width: 100vw;
+        height: 95px;
+        bottom: 0px;
+        margin: 0px;
+        padding: 0px;
+        gap: 0px;
+        margin: 0px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    #small-info-field {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #big-info-field {
+        display: none;
+    }
+
     .caption-box {
         width: 60px;
     }
@@ -381,6 +434,7 @@ body {
         flex-direction: column;
         align-items: end;
         margin-right: 5px;
+        margin-top: 40px;
         gap: 5px
     }
 
