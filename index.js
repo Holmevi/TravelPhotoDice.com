@@ -118,11 +118,16 @@ displayPhoto.addEventListener('click', photoClick);
     const locationButton = document.querySelector('#location-button');
     locationButton.addEventListener('click', locationClick);
 
+    const smallDateField = document.querySelector('#small-date-field');
+    smallDateField.addEventListener('click', smallDateClick);
+
+    const bigDateField = document.querySelector('#big-date-field');
+    bigDateField.addEventListener('click', bigDateClick);
+
     const binguButton = document.querySelector('#bingu');
     binguButton.addEventListener('click', binguClick);
 
 const locationType = document.querySelector('#location-caption');
-const photoDate = document.querySelector('#photo-date');
 
 function disableSubMenus() {
     natureMenu.style="display: none"
@@ -300,6 +305,20 @@ function locationClick() {
     showPhoto(selectedPhoto);
 }
 
+function smallDateClick() {
+    filterType = 'Info';
+    filter = smallDateField.textContent;
+    let selectedPhoto = generatePhoto();
+    showPhoto(selectedPhoto);
+}
+
+function bigDateClick() {
+    filterType = 'Info';
+    filter = bigDateField.textContent;
+    let selectedPhoto = generatePhoto();
+    showPhoto(selectedPhoto);
+}
+
 function binguClick() {
     filterType = 'Tag';
     filter = 'Bingu';
@@ -315,6 +334,10 @@ function generatePhoto() {
     } else if(filterType === 'Location') {
         selectedPhotos = ratedPhotos.filter(selected => {
             return selected.location.includes(filter);
+        });
+    } else if(filterType === 'Info') {
+        selectedPhotos = ratedPhotos.filter(selected => {
+            return selected.date.includes(filter);
         });
     } else {
         if(filter === 'All') {
@@ -340,7 +363,9 @@ function showPhoto(photo) {
     countryButton.textContent = photo.country;
     locationType.textContent = photo.location_type + ":";
     locationButton.textContent = photo.location;
-    photoDate.textContent = photo.date;
+    const formattedDate = photo.date.replace(/\//g, '-');
+    smallDateField.textContent = formattedDate;
+    bigDateField.textContent = formattedDate;
 };
 
 let selectedPhoto = generatePhoto(ratedPhotos);
