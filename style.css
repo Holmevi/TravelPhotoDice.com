@@ -247,7 +247,7 @@ body {
 .small-date-text {
   font-family: "Roboto", sans-serif;
   display: inline;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 22px;
   font-weight: 300;
   color: rgb(255, 255, 255);
@@ -258,13 +258,13 @@ body {
 .big-date-text {
   font-family: "Roboto", sans-serif;
   display: inline;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 22px;
-  font-weight: 300;
+  font-weight: 500;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
-  padding: 0px 0px 0px 15px;
+  padding: 0px 0px 0px 0px;
 }
 
 #small-info-field {
@@ -331,8 +331,8 @@ body {
 .copyright {
   font-family: "Roboto", sans-serif;
   display: inline;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: 300;
   margin: 0px 0px 0px 0px;
 }
@@ -340,9 +340,9 @@ body {
 .bingu {
   font-family: "Roboto", sans-serif;
   display: inline;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight:300;
   margin: 0px 0px 0px 0px;
   cursor: pointer;
 }
