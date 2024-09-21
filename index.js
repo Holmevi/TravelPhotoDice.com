@@ -363,7 +363,7 @@ function showPhoto(photo) {
     countryButton.textContent = photo.country;
     locationType.textContent = photo.location_type + ":";
     locationButton.textContent = photo.location;
-    const formattedDate = photo.date.replace(/\//g, '-');
+    const formattedDate = photo.date.replace(/\//g, ' - ');
     smallDateField.textContent = formattedDate;
     bigDateField.textContent = formattedDate;
 };
