@@ -117,6 +117,9 @@ displayPhoto.addEventListener('click', photoClick);
 
         const sponsorMenu = document.querySelector('#sponsor-menu');
 
+        const mapButton = document.querySelector('#map-button');
+        mapButton.addEventListener('click', mapClick);
+
     const countryButton = document.querySelector('#country-button');
     countryButton.addEventListener('click', countryClick);
     
@@ -312,6 +315,10 @@ function sponsorClick() {
     sponsorMenu.style="display: flex";
 }
 
+function mapClick() {
+
+}
+
 function countryClick() {
     disableSubMenus()
     allMenu.style="display: flex";
@@ -419,7 +426,7 @@ function showPhoto(photo) {
         adButton.style.display = 'inline-block';
         adBottomButton.style.display = 'inline-block';
 
-        adButton.onclick = () => {
+        mapButton.onclick = () => {
             if (photo.link && photo.link !== 'none') {
                 window.open(photo.link, '_blank');
             } else {
