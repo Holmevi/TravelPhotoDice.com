@@ -133,7 +133,7 @@ displayPhoto.addEventListener('click', photoClick);
     adButton.addEventListener('click', adClick);
 
     const adBottomButton = document.querySelector('#ad-bottom-button');
-    adBottomButton.addEventListener('click', adClick);
+    adBottomButton.addEventListener('click', adBottomClick);
 
     const binguButton = document.querySelector('#bingu');
     binguButton.addEventListener('click', binguClick);
@@ -313,6 +313,8 @@ function sponsorClick() {
 }
 
 function countryClick() {
+    disableSubMenus()
+    allMenu.style="display: flex";
     filterType = 'Country';
     filter = countryButton.textContent;
     let selectedPhoto = generatePhoto();
@@ -320,6 +322,8 @@ function countryClick() {
 }
 
 function locationClick() {
+    disableSubMenus()
+    allMenu.style="display: flex";
     filterType = 'Location';
     filter = locationButton.textContent;
     let selectedPhoto = generatePhoto();
@@ -350,6 +354,8 @@ function adClick() {
 function adBottomClick() {
     filterType = 'Tag';
     filter = 'Ad';
+    disableSubMenus()
+    sponsorMenu.style="display: flex";
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
 }
