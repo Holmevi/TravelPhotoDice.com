@@ -112,6 +112,11 @@ displayPhoto.addEventListener('click', photoClick);
             const testButton = document.querySelector('#test-button');
             testButton.addEventListener('click', testClick);
 
+    const sponsorButton = document.querySelector('#sponsor-button');
+    sponsorButton.addEventListener('click', sponsorClick);
+
+        const sponsorMenu = document.querySelector('#sponsor-menu');
+
     const countryButton = document.querySelector('#country-button');
     countryButton.addEventListener('click', countryClick);
     
@@ -124,6 +129,12 @@ displayPhoto.addEventListener('click', photoClick);
     const bigDateField = document.querySelector('#big-date-field');
     bigDateField.addEventListener('click', bigDateClick);
 
+    const adButton = document.querySelector('#ad-button');
+    adButton.addEventListener('click', adClick);
+
+    const adBottomButton = document.querySelector('#ad-bottom-button');
+    adBottomButton.addEventListener('click', adClick);
+
     const binguButton = document.querySelector('#bingu');
     binguButton.addEventListener('click', binguClick);
 
@@ -133,6 +144,7 @@ function disableSubMenus() {
     natureMenu.style="display: none"
     resortMenu.style="display: none"
     cityMenu.style="display: none"
+    sponsorMenu.style="display: none"
     allMenu.style="display: none"
     countrySelect.value=""
 }
@@ -291,6 +303,15 @@ function cityClick() {
         showPhoto(selectedPhoto);
     }
 
+function sponsorClick() {
+    filterType = 'Tag';
+    filter = 'Ad';
+    let selectedPhoto = generatePhoto();
+    showPhoto(selectedPhoto);
+    disableSubMenus()
+    sponsorMenu.style="display: flex";
+}
+
 function countryClick() {
     filterType = 'Country';
     filter = countryButton.textContent;
@@ -315,6 +336,20 @@ function smallDateClick() {
 function bigDateClick() {
     filterType = 'Info';
     filter = bigDateField.textContent;
+    let selectedPhoto = generatePhoto();
+    showPhoto(selectedPhoto);
+}
+
+function adClick() {
+    filterType = 'Tag';
+    filter = 'Ad';
+    let selectedPhoto = generatePhoto();
+    showPhoto(selectedPhoto);
+}
+
+function adBottomClick() {
+    filterType = 'Tag';
+    filter = 'Ad';
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
 }
@@ -363,10 +398,39 @@ function showPhoto(photo) {
     countryButton.textContent = photo.country;
     locationType.textContent = photo.location_type + ":";
     locationButton.textContent = photo.location;
+
     const formattedDate = photo.date.replace(/\//g, ' - ');
     smallDateField.textContent = formattedDate;
     bigDateField.textContent = formattedDate;
-};
+
+    // Clear previous onclick handler
+    adButton.onclick = null;
+
+    // Handle ad button display and click
+    if (photo.ad && photo.ad !== 'none') {
+        adButton.textContent = photo.ad;
+        adBottomButton.textContent = photo.ad;
+        adButton.style.display = 'inline-block';
+        adBottomButton.style.display = 'inline-block';
+
+        adButton.onclick = () => {
+            if (photo.link && photo.link !== 'none') {
+                window.open(photo.link, '_blank');
+            } else {
+                alert("No link available");
+            }
+        };
+    } else {
+        adButton.textContent = 'Sponsors';
+        adBottomButton.textContent = 'Sponsors';
+        adButton.style.display = 'inline-block'; // Ensure it stays visible
+        adBottomButton.style.display = 'inline-block'; // Ensure it stays visible
+
+        adButton.onclick = () => {
+            adClick(); // Load the next sponsor photo
+        };
+    }
+}
 
 let selectedPhoto = generatePhoto(ratedPhotos);
 showPhoto(selectedPhoto);
