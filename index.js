@@ -422,7 +422,7 @@ function showPhoto(photo) {
     locationType.textContent = photo.location_type + ":";
     locationButton.textContent = photo.location;
 
-    const formattedDate = photo.date.replace(/\//g, ' - ');
+    const formattedDate = photo.date.replace(/\//g, '-');
     smallDateField.textContent = formattedDate;
     bigDateField.textContent = formattedDate;
 
@@ -432,6 +432,7 @@ function showPhoto(photo) {
     // Handle ad button display and click
     if (photo.ad && photo.ad !== 'none') {
         adButton.textContent = photo.ad;
+
         adBottomButton.textContent = photo.ad;
         adButton.style.display = 'inline-block';
         adBottomButton.style.display = 'inline-block';
