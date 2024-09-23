@@ -138,6 +138,9 @@ displayPhoto.addEventListener('click', photoClick);
     const adBottomButton = document.querySelector('#ad-bottom-button');
     adBottomButton.addEventListener('click', adBottomClick);
 
+    const mapBottomButton = document.querySelector('#map-bottom-button');
+    mapBottomButton.addEventListener('click', mapBottomClick);
+
     const binguButton = document.querySelector('#bingu');
     binguButton.addEventListener('click', binguClick);
 
@@ -148,6 +151,7 @@ function disableSubMenus() {
     resortMenu.style="display: none"
     cityMenu.style="display: none"
     sponsorMenu.style="display: none"
+    mapBottomButton.style="display: none"
     allMenu.style="display: none"
     countrySelect.value=""
 }
@@ -313,6 +317,7 @@ function sponsorClick() {
     showPhoto(selectedPhoto);
     disableSubMenus()
     sponsorMenu.style="display: flex";
+    mapBottomButton.style="display: flex";
 }
 
 function mapClick() {
@@ -363,8 +368,13 @@ function adBottomClick() {
     filter = 'Ad';
     disableSubMenus()
     sponsorMenu.style="display: flex";
+    mapBottomButton.style="display: flex";
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+}
+
+function mapBottomClick() {
+
 }
 
 function binguClick() {
@@ -416,7 +426,7 @@ function showPhoto(photo) {
     smallDateField.textContent = formattedDate;
     bigDateField.textContent = formattedDate;
 
-    // Clear previous onclick handler
+        // Clear previous onclick handler
     adButton.onclick = null;
 
     // Handle ad button display and click
@@ -425,8 +435,17 @@ function showPhoto(photo) {
         adBottomButton.textContent = photo.ad;
         adButton.style.display = 'inline-block';
         adBottomButton.style.display = 'inline-block';
+        mapBottomButton.style.display = 'inline-block';
 
         mapButton.onclick = () => {
+            if (photo.link && photo.link !== 'none') {
+                window.open(photo.link, '_blank');
+            } else {
+                alert("No link available");
+            }
+        };
+
+        mapBottomButton.onclick = () => {
             if (photo.link && photo.link !== 'none') {
                 window.open(photo.link, '_blank');
             } else {
@@ -438,6 +457,7 @@ function showPhoto(photo) {
         adBottomButton.textContent = 'Sponsors';
         adButton.style.display = 'inline-block'; // Ensure it stays visible
         adBottomButton.style.display = 'inline-block'; // Ensure it stays visible
+        mapBottomButton.style.display = 'none';
 
         adButton.onclick = () => {
             adClick(); // Load the next sponsor photo
