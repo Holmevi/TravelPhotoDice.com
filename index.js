@@ -454,8 +454,8 @@ function showPhoto(photo) {
             }
         };
     } else {
-        adButton.textContent = 'Sponsors';
-        adBottomButton.textContent = 'Sponsors';
+        adButton.textContent = 'Exclusive';
+        adBottomButton.textContent = 'Exclusive';
         adButton.style.display = 'inline-block'; // Ensure it stays visible
         adBottomButton.style.display = 'inline-block'; // Ensure it stays visible
         mapBottomButton.style.display = 'none';
