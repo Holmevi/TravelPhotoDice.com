@@ -66,6 +66,12 @@ displayPhoto.addEventListener('click', photoClick);
             const jungleButton = document.querySelector('#jungle-button');
             jungleButton.addEventListener('click', jungleClick);
 
+            const lakeButton = document.querySelector('#lake-button');
+            lakeButton.addEventListener('click', lakeClick);
+            
+            const waterfallButton = document.querySelector('#waterfall-button');
+            waterfallButton.addEventListener('click', waterfallClick);
+
             const sunsetButton = document.querySelector('#sunset-button');
             sunsetButton.addEventListener('click', sunsetClick);  
 
@@ -91,6 +97,9 @@ displayPhoto.addEventListener('click', photoClick);
 
             const drinkButton = document.querySelector('#drink-button');
             drinkButton.addEventListener('click', drinkClick);
+
+            const irishCoffeeButton = document.querySelector('#irish-coffee-button');
+            irishCoffeeButton.addEventListener('click', irishCoffeeClick);
             
     const cityButton = document.querySelector('#city-button');
     cityButton.addEventListener('click', cityClick);
@@ -109,8 +118,8 @@ displayPhoto.addEventListener('click', photoClick);
             const coffeeButton = document.querySelector('#coffee-button');
             coffeeButton.addEventListener('click', coffeeClick);
 
-            const testButton = document.querySelector('#test-button');
-            testButton.addEventListener('click', testClick);
+            const dinnerButton = document.querySelector('#dinner-button');
+            dinnerButton.addEventListener('click', dinnerClick);
 
     const sponsorButton = document.querySelector('#sponsor-button');
     sponsorButton.addEventListener('click', sponsorClick);
@@ -208,6 +217,20 @@ function natureClick() {
         showPhoto(selectedPhoto);
     }
 
+    function lakeClick() {
+        filterType = 'Tag';
+        filter = 'Lake';
+        let selectedPhoto = generatePhoto();
+        showPhoto(selectedPhoto);
+    }
+
+    function waterfallClick() {
+        filterType = 'Tag';
+        filter = 'Waterfall';
+        let selectedPhoto = generatePhoto();
+        showPhoto(selectedPhoto);
+    }
+
     function sunsetClick() {
         filterType = 'Tag';
         filter = 'Sunset';
@@ -266,6 +289,13 @@ function resortClick() {
         showPhoto(selectedPhoto);
     }
 
+    function irishCoffeeClick() {
+        filterType = 'Tag';
+        filter = 'Irish Coffee';
+        let selectedPhoto = generatePhoto();
+        showPhoto(selectedPhoto);
+    }
+
 function cityClick() {
     filterType = 'Tag';
     filter = 'City';
@@ -303,9 +333,9 @@ function cityClick() {
         showPhoto(selectedPhoto);
     }
 
-    function testClick() {
+    function dinnerClick() {
         filterType = 'Tag';
-        filter = 'Test';
+        filter = 'Dinner';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
     }
