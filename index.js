@@ -55,6 +55,9 @@ displayPhoto.addEventListener('click', photoClick);
             const countrySelect = document.querySelector('#country-select');
             countrySelect.addEventListener('change', countryChange);
 
+            const lastButton = document.querySelector('#last-button');
+            lastButton.addEventListener('click', lastClick);
+
     const natureButton = document.querySelector('#nature-button');
     natureButton.addEventListener('click', natureClick);
 
@@ -190,6 +193,13 @@ function allClick() {
     function countryChange() {
         filterType = 'Country';
         filter = countrySelect.value;
+        let selectedPhoto = generatePhoto();
+        showPhoto(selectedPhoto);
+    }
+
+    function lastClick() {
+        filterType = 'Tag';
+        filter = 'Last';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
     }
