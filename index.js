@@ -121,6 +121,9 @@ displayPhoto.addEventListener('click', photoClick);
             const coffeeButton = document.querySelector('#coffee-button');
             coffeeButton.addEventListener('click', coffeeClick);
 
+            const dessertButton = document.querySelector('#dessert-button');
+            dessertButton.addEventListener('click', dessertClick);
+
             const dinnerButton = document.querySelector('#dinner-button');
             dinnerButton.addEventListener('click', dinnerClick);
 
@@ -339,6 +342,13 @@ function cityClick() {
     function coffeeClick() {
         filterType = 'Tag';
         filter = 'Coffee';
+        let selectedPhoto = generatePhoto();
+        showPhoto(selectedPhoto);
+    }
+
+    function dessertClick() {
+        filterType = 'Tag';
+        filter = 'Dessert';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
     }
