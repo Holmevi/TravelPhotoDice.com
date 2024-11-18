@@ -58,6 +58,9 @@ displayPhoto.addEventListener('click', photoClick);
             const lastButton = document.querySelector('#last-button');
             lastButton.addEventListener('click', lastClick);
 
+            const topButton = document.querySelector('#top-button');
+            topButton.addEventListener('click', topClick);
+
     const natureButton = document.querySelector('#nature-button');
     natureButton.addEventListener('click', natureClick);
 
@@ -203,6 +206,13 @@ function allClick() {
     function lastClick() {
         filterType = 'Tag';
         filter = 'Last';
+        let selectedPhoto = generatePhoto();
+        showPhoto(selectedPhoto);
+    }
+
+    function topClick() {
+        filterType = 'Tag';
+        filter = 'Top';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
     }
