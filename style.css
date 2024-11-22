@@ -163,7 +163,16 @@ body {
   padding: 3px;
   transition: 0.2s;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  /* Hide scroll bar */
+  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  -webkit-appearance: none;  /* Removes default appearance on WebKit browsers (Chrome, Safari) */
+  appearance: none;           /* Removes default appearance on Firefox */
+  overflow: hidden;           /* Hides the scrollbar */
+  text-overflow: ellipsis;    /* Optional, adds ellipsis (...) for overflowed text */
+}
+
+.sub-select::-webkit-scrollbar {
+  display: none;             /* Hides the scrollbar on WebKit browsers */
 }
 
 .follow-button:hover {
