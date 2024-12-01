@@ -16,6 +16,11 @@ body {
   align-items: center;
 }
 
+a {
+  color: white;               /* Ta bort blå text på länkar */
+  text-decoration: none;        /* Ta bort understrukning av länkar */
+}
+
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -34,7 +39,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.fb-logo-container {
+.logo-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -68,13 +73,20 @@ body {
   margin: 13px 0px 0px 10px;
 }
 
+.legado-info {
+  font-family: "Piazzolla", serif;
+  display: inline;
+  height: 30px;
+  margin: 0px 0px 0px 15px;
+}
+
 .travel-logo {
   font-family: "Piazzolla", serif;
   display: inline;
   font-size: 30px;
   line-height: 30px;
   font-weight: 900;
-  margin: 0px 0px 0px 15px;
+  margin: 0px 0px 0px 10px;
 }
 
 .photo-logo {
@@ -451,6 +463,13 @@ body {
     margin: 13px -5px 0px 10px;
   }
 
+  .legado-info {
+    font-family: "Piazzolla", serif;
+    display: inline;
+    height: 25px;
+    margin: 0px 8px 0px 0px;
+  }
+
   .travel-logo {
     font-family: "Piazzolla", serif;
     display: inline;
@@ -482,6 +501,7 @@ body {
     display: inline;
     font-size: 25px;
     font-weight: 300;
+    margin-right: 0px;
   }
 
   .follow-container {
@@ -491,6 +511,18 @@ body {
   .follow-image {
     height: 25px;
     padding: 0px;
+  }
+
+  .legado-logo {
+    font-family: 'Piazzolla', serif;
+    display: inline;
+    font-size: 15px;
+  }
+  
+  .se-logo {
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    font-size: 15px;
   }
 
   .follow-button:hover {
