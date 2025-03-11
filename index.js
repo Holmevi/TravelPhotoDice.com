@@ -174,20 +174,35 @@ function disableSubMenus() {
     countrySelect.value=""
 }
 
+// Global variabel för att lagra den förladdade bilden
+let preloadedPhoto = null;
+
 function photoClick() {
-    let selectedPhoto = generatePhoto();
-    showPhoto (selectedPhoto);
-    /*
-    var me = this;
-    console.log(this);
-    this.style.webkitAnimation = 'none';
-    setTimeout(function() {
-        me.style.webkitAnimation = '';
-    }, 10);
-    */
+    let selectedPhoto;
+    // Om vi redan har en förladdad bild, använd den
+    if (preloadedPhoto) {
+        selectedPhoto = preloadedPhoto;
+        preloadedPhoto = null; // Töm variabeln efter användning
+    } else {
+        selectedPhoto = generatePhoto();
+    }
+    showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
+}
+
+// Funktion för att förladda nästa bild
+function preloadNextPhoto() {
+    // Hämta nästa bild enligt samma logik som generatePhoto()
+    let nextPhoto = generatePhoto();
+    // Skapa ett nytt Image-objekt och sätt dess src för att ladda bilden i bakgrunden
+    let preloader = new Image();
+    preloader.src = 'images/' + nextPhoto.photo_url;
+    // Spara den förladdade bilden globalt så att vi kan använda den vid nästa klick
+    preloadedPhoto = nextPhoto;
 }
 
 function allClick() {
+    preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
     filterType = 'Tag';
     filter = 'All';
     let selectedPhoto = generatePhoto();
@@ -197,6 +212,7 @@ function allClick() {
 }
 
     function countryChange() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Country';
         filter = countrySelect.value;
         let selectedPhoto = generatePhoto();
@@ -204,6 +220,7 @@ function allClick() {
     }
 
     function lastClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Last';
         let selectedPhoto = generatePhoto();
@@ -211,6 +228,7 @@ function allClick() {
     }
 
     function topClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Top';
         let selectedPhoto = generatePhoto();
@@ -218,6 +236,7 @@ function allClick() {
     }
 
 function natureClick() {
+    preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
     filterType = 'Tag';
     filter = 'Nature';
     let selectedPhoto = generatePhoto();
@@ -227,6 +246,7 @@ function natureClick() {
 }
 
     function coastClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Coast';
         let selectedPhoto = generatePhoto();
@@ -234,6 +254,7 @@ function natureClick() {
     }
 
     function jungleClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Jungle';
         let selectedPhoto = generatePhoto();
@@ -241,6 +262,7 @@ function natureClick() {
     }
 
     function lakeClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Lake';
         let selectedPhoto = generatePhoto();
@@ -248,6 +270,7 @@ function natureClick() {
     }
 
     function waterfallClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Waterfall';
         let selectedPhoto = generatePhoto();
@@ -255,6 +278,7 @@ function natureClick() {
     }
 
     function sunsetClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Sunset';
         let selectedPhoto = generatePhoto();
@@ -262,6 +286,7 @@ function natureClick() {
     }
 
     function viewpointClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Viewpoint';
         let selectedPhoto = generatePhoto();
@@ -269,6 +294,7 @@ function natureClick() {
     }
 
 function resortClick() {
+    preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
     filterType = 'Tag';
     filter = 'Resort';
     let selectedPhoto = generatePhoto();
@@ -278,6 +304,7 @@ function resortClick() {
 }
 
     function beachClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Beach';
         let selectedPhoto = generatePhoto();
@@ -285,6 +312,7 @@ function resortClick() {
     }
 
     function poolClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Pool';
         let selectedPhoto = generatePhoto();
@@ -292,6 +320,7 @@ function resortClick() {
     }
 
     function hotelClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Hotel';
         let selectedPhoto = generatePhoto();
@@ -299,6 +328,7 @@ function resortClick() {
     }
 
     function eatClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Food';
         let selectedPhoto = generatePhoto();
@@ -306,6 +336,7 @@ function resortClick() {
     }
 
     function drinkClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Drink';
         let selectedPhoto = generatePhoto();
@@ -313,6 +344,7 @@ function resortClick() {
     }
 
     function irishCoffeeClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Irish Coffee';
         let selectedPhoto = generatePhoto();
@@ -320,6 +352,7 @@ function resortClick() {
     }
 
 function cityClick() {
+    preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
     filterType = 'Tag';
     filter = 'City';
     let selectedPhoto = generatePhoto();
@@ -329,6 +362,7 @@ function cityClick() {
 }
 
     function cultureClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Culture';
         let selectedPhoto = generatePhoto();
@@ -336,6 +370,7 @@ function cityClick() {
     }
 
     function highriseClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Highrise';
         let selectedPhoto = generatePhoto();
@@ -343,6 +378,7 @@ function cityClick() {
     }
 
     function shoppingClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Shopping';
         let selectedPhoto = generatePhoto();
@@ -350,6 +386,7 @@ function cityClick() {
     }
 
     function coffeeClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Coffee';
         let selectedPhoto = generatePhoto();
@@ -357,6 +394,7 @@ function cityClick() {
     }
 
     function dessertClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Dessert';
         let selectedPhoto = generatePhoto();
@@ -364,6 +402,7 @@ function cityClick() {
     }
 
     function dinnerClick() {
+        preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
         filter = 'Dinner';
         let selectedPhoto = generatePhoto();
@@ -371,6 +410,7 @@ function cityClick() {
     }
 
 function sponsorClick() {
+    preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
     filterType = 'Tag';
     filter = 'Ad';
     let selectedPhoto = generatePhoto();
@@ -385,6 +425,7 @@ function mapClick() {
 }
 
 function countryClick() {
+    preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
     disableSubMenus()
     allMenu.style="display: flex";
     filterType = 'Country';
@@ -394,6 +435,7 @@ function countryClick() {
 }
 
 function locationClick() {
+    preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
     disableSubMenus()
     allMenu.style="display: flex";
     filterType = 'Location';
@@ -403,6 +445,7 @@ function locationClick() {
 }
 
 function smallDateClick() {
+    preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
     filterType = 'Info';
     filter = smallDateField.textContent;
     let selectedPhoto = generatePhoto();
@@ -410,6 +453,7 @@ function smallDateClick() {
 }
 
 function bigDateClick() {
+    preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
     filterType = 'Info';
     filter = bigDateField.textContent;
     let selectedPhoto = generatePhoto();
@@ -417,6 +461,7 @@ function bigDateClick() {
 }
 
 function adClick() {
+    preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
     filterType = 'Tag';
     filter = 'Ad';
     let selectedPhoto = generatePhoto();
@@ -424,6 +469,7 @@ function adClick() {
 }
 
 function adBottomClick() {
+    preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
     filterType = 'Tag';
     filter = 'Ad';
     disableSubMenus()
@@ -438,6 +484,7 @@ function mapBottomClick() {
 }
 
 function binguClick() {
+    preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
     filterType = 'Tag';
     filter = 'Bingu';
     let selectedPhoto = generatePhoto();
@@ -477,6 +524,7 @@ function generatePhoto() {
 };
 
 function showPhoto(photo) {
+    // Visa den aktuella bilden
     displayPhoto.src = 'images/' + photo.photo_url;
     countryButton.textContent = photo.country;
     locationType.textContent = photo.location_type + ":";
@@ -486,13 +534,10 @@ function showPhoto(photo) {
     smallDateField.textContent = formattedDate;
     bigDateField.textContent = formattedDate;
 
-        // Clear previous onclick handler
+    // Hantera ad-knappens visning och klick
     adButton.onclick = null;
-
-    // Handle ad button display and click
     if (photo.ad && photo.ad !== 'none') {
         adButton.textContent = photo.ad;
-
         adBottomButton.textContent = photo.ad;
         adButton.style.display = 'inline-block';
         adBottomButton.style.display = 'inline-block';
@@ -516,12 +561,12 @@ function showPhoto(photo) {
     } else {
         adButton.textContent = 'Exclusive';
         adBottomButton.textContent = 'Exclusive';
-        adButton.style.display = 'inline-block'; // Ensure it stays visible
-        adBottomButton.style.display = 'inline-block'; // Ensure it stays visible
+        adButton.style.display = 'inline-block';
+        adBottomButton.style.display = 'inline-block';
         mapBottomButton.style.display = 'none';
 
         adButton.onclick = () => {
-            adClick(); // Load the next sponsor photo
+            adClick(); // Ladda nästa sponsorbild
         };
     }
 }
