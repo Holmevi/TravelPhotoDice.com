@@ -207,6 +207,7 @@ function allClick() {
     filter = 'All';
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     disableSubMenus();
     allMenu.style="display: flex";
 }
@@ -217,6 +218,7 @@ function allClick() {
         filter = countrySelect.value;
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function lastClick() {
@@ -225,6 +227,7 @@ function allClick() {
         filter = 'Last';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function topClick() {
@@ -233,6 +236,7 @@ function allClick() {
         filter = 'Top';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
 function natureClick() {
@@ -241,6 +245,7 @@ function natureClick() {
     filter = 'Nature';
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     disableSubMenus();
     natureMenu.style="display: flex";
 }
@@ -251,6 +256,7 @@ function natureClick() {
         filter = 'Coast';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function jungleClick() {
@@ -259,6 +265,7 @@ function natureClick() {
         filter = 'Jungle';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function lakeClick() {
@@ -267,6 +274,7 @@ function natureClick() {
         filter = 'Lake';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function waterfallClick() {
@@ -275,6 +283,7 @@ function natureClick() {
         filter = 'Waterfall';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function sunsetClick() {
@@ -283,6 +292,7 @@ function natureClick() {
         filter = 'Sunset';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function viewpointClick() {
@@ -291,6 +301,7 @@ function natureClick() {
         filter = 'Viewpoint';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
 function resortClick() {
@@ -299,6 +310,7 @@ function resortClick() {
     filter = 'Resort';
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     disableSubMenus()
     resortMenu.style="display: flex";
 }
@@ -309,6 +321,7 @@ function resortClick() {
         filter = 'Beach';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function poolClick() {
@@ -317,6 +330,7 @@ function resortClick() {
         filter = 'Pool';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function hotelClick() {
@@ -325,6 +339,7 @@ function resortClick() {
         filter = 'Hotel';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function eatClick() {
@@ -333,6 +348,7 @@ function resortClick() {
         filter = 'Food';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function drinkClick() {
@@ -341,6 +357,7 @@ function resortClick() {
         filter = 'Drink';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function irishCoffeeClick() {
@@ -349,6 +366,7 @@ function resortClick() {
         filter = 'Irish Coffee';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
 function cityClick() {
@@ -357,6 +375,7 @@ function cityClick() {
     filter = 'City';
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     disableSubMenus()
     cityMenu.style="display: flex";
 }
@@ -367,6 +386,7 @@ function cityClick() {
         filter = 'Culture';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function highriseClick() {
@@ -375,6 +395,7 @@ function cityClick() {
         filter = 'Highrise';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function shoppingClick() {
@@ -383,6 +404,7 @@ function cityClick() {
         filter = 'Shopping';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function coffeeClick() {
@@ -391,6 +413,7 @@ function cityClick() {
         filter = 'Coffee';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function dessertClick() {
@@ -399,6 +422,7 @@ function cityClick() {
         filter = 'Dessert';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
     function dinnerClick() {
@@ -407,6 +431,7 @@ function cityClick() {
         filter = 'Dinner';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
+        preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     }
 
 function sponsorClick() {
@@ -415,6 +440,7 @@ function sponsorClick() {
     filter = 'Ad';
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
     disableSubMenus()
     sponsorMenu.style="display: flex";
     mapBottomButton.style="display: flex";
@@ -432,6 +458,7 @@ function countryClick() {
     filter = countryButton.textContent;
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
 }
 
 function locationClick() {
@@ -442,6 +469,7 @@ function locationClick() {
     filter = locationButton.textContent;
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
 }
 
 function smallDateClick() {
@@ -450,6 +478,7 @@ function smallDateClick() {
     filter = smallDateField.textContent;
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
 }
 
 function bigDateClick() {
@@ -458,6 +487,7 @@ function bigDateClick() {
     filter = bigDateField.textContent;
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
 }
 
 function adClick() {
@@ -466,6 +496,7 @@ function adClick() {
     filter = 'Ad';
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
 }
 
 function adBottomClick() {
@@ -477,6 +508,7 @@ function adBottomClick() {
     mapBottomButton.style="display: flex";
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
 }
 
 function mapBottomClick() {
@@ -489,6 +521,7 @@ function binguClick() {
     filter = 'Bingu';
     let selectedPhoto = generatePhoto();
     showPhoto(selectedPhoto);
+    preloadNextPhoto(); // Förladda nästa bild i bakgrunden
 }
 
 function generatePhoto() {
