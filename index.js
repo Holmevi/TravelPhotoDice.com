@@ -66,8 +66,8 @@ displayPhoto.addEventListener('click', photoClick);
 
         const natureMenu = document.querySelector('#nature-menu');
 
-            const coastButton = document.querySelector('#coast-button');
-            coastButton.addEventListener('click', coastClick);
+            const animalButton = document.querySelector('#animal-button');
+            animalButton.addEventListener('click', animalClick);
 
             const jungleButton = document.querySelector('#jungle-button');
             jungleButton.addEventListener('click', jungleClick);
@@ -250,10 +250,10 @@ function natureClick() {
     natureMenu.style="display: flex";
 }
 
-    function coastClick() {
+    function animalClick() {
         preloadedPhoto = null; // Återställ förladdad bild vid filterbyte
         filterType = 'Tag';
-        filter = 'Coast';
+        filter = 'Animal';
         let selectedPhoto = generatePhoto();
         showPhoto(selectedPhoto);
         preloadNextPhoto(); // Förladda nästa bild i bakgrunden
